@@ -11,6 +11,6 @@ vim ~/.ps1.sh # Edit default user, host and location.
 
 ## Features
 
-[x] Hide default user, host and location.
-[x] Git branch and clean state.
-[x] Exit code as color of "$".
+- [x] Hide default user, host and location.
+- [x] Git branch and clean state.
+- [x] Exit code as color of "$".
