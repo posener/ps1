@@ -17,6 +17,6 @@ vim ~/.ps1.sh # Edit default user, host and location.
 
 ## Screenshots
 
-[master](https://github.com/posener/ps1/raw/master/images/master.png "master")
+![master](https://github.com/posener/ps1/raw/master/images/master.png "master")
 
-[branch-diff](https://github.com/posener/ps1/raw/master/images/branch-diff.png "branch-diff")
+![branch-diff](https://github.com/posener/ps1/raw/master/images/branch-diff.png "branch-diff")
