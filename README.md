@@ -14,3 +14,9 @@ vim ~/.ps1.sh # Edit default user, host and location.
 - [x] Hide default user, host and location.
 - [x] Git branch and clean state.
 - [x] Exit code as color of "$".
+
+## Screenshots
+
+[master](https://github.com/posener/ps1/raw/master/images/master.png "master")
+
+[branch-diff](https://github.com/posener/ps1/raw/master/images/branch-diff.png "branch-diff")
