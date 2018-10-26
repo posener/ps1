@@ -38,7 +38,7 @@ function __ps1_location {
 function __ps1_git {
 
 	# git coloring
-	if ls .git &> /dev/null
+	if git status &> /dev/null
 	then
 		printf "("
 		printf "$(git branch --no-color 2> /dev/null | grep -e '^*' | sed 's/^* //')"
