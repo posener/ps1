@@ -44,7 +44,7 @@ function __ps1_git {
 		printf "$(git branch --no-color 2> /dev/null | grep -e '^*' | sed 's/^* //')"
 		if ! git diff --quiet --exit-code &> /dev/null || ! git diff --quiet --staged --exit-code &> /dev/null
 		then
-			printf ' !'
+			printf ' +'
 		fi
 		printf ") "
 	fi
