@@ -2,27 +2,28 @@
 
 # customize things that you don't want to show
 __hide_user="eyal"
-__hide_host="home"
 __hide_location="${HOME}"
 
 function __ps1_user_host {
-
-	local HOST="$(hostname --short)"
-
-	if [ "${USER}" != "${__hide_user}" ] || [ "${HOST}" != "${__hide_host}" ]
+	# Hide not interesting username and hostname
+	
+	local text=""
+	
+	# Add user if it is not __hide_user
+	if [ "${USER}" != "${__hide_user}" ]
 	then
-		if [ "${USER}" != "${__hide_user}" ]
-		then
-			printf "${USER}"
-		fi
-		if [ "${HOST}" != "${__hide_host}" ]
-		then
-			printf "@${HOST}"
-		fi
-		printf " "
+		local text="${USER}"
+	fi
+	
+	# Set host only if connected from a remote machine
+	if env | grep SSH_CONNECTION &>/dev/null
+	then
+		local text="${text}@$(hostname --short)"
 	fi
 
-	return $1 # return exit code so it could be used in following functions
+	printf "${text}"
+
+	return $1 # return exit code so it could be used in following functionss
 }
 
 function __ps1_location {
